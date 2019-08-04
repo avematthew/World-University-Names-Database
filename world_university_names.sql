@@ -19,18 +19,18 @@ CREATE TABLE IF NOT EXISTS `countries` (
   `id` int(5) NOT NULL AUTO_INCREMENT,
   `iso2` char(2) NOT NULL,
   `iso3` char(3) NOT NULL,
-  `name` varchar(100) NOT NULL,
+  `university_name` varchar(100) NOT NULL,
   PRIMARY KEY (`id`),
   KEY `iso2` (`iso2`),
   KEY `iso3` (`iso3`),
-  KEY `name` (`name`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=895 ;
+  KEY `university_name` (`university_name`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=895 ;
 
 --
 -- Dumping data for table `countries`
 --
 
-INSERT INTO `countries` (`id`, `iso2`, `iso3`, `name`) VALUES
+INSERT INTO `countries` (`id`, `iso2`, `iso3`, `university_name`) VALUES
 (4, 'AF', 'AFG', 'Afghanistan'),
 (248, 'AX', 'ALA', 'Aland Islands'),
 (8, 'AL', 'ALB', 'Albania'),
@@ -287,16 +287,16 @@ INSERT INTO `countries` (`id`, `iso2`, `iso3`, `name`) VALUES
 CREATE TABLE IF NOT EXISTS `linkedin_universities` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `country_id` int(5) NOT NULL,
-  `name` varchar(150) NOT NULL,
+  `university_name` varchar(150) NOT NULL,
   PRIMARY KEY (`id`),
   KEY `country_id` (`country_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=9230 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=9230 ;
 
 --
 -- Dumping data for table `linkedin_universities`
 --
 
-INSERT INTO `linkedin_universities` (`id`, `country_id`, `name`) VALUES
+INSERT INTO `linkedin_universities` (`id`, `country_id`, `university_name`) VALUES
 (1, 8, 'Akademia e Arteve Tiranë'),
 (2, 8, 'Aleksandër Xhuvani University of Elbasan'),
 (3, 8, 'Eqrem Çabej University of Gjirokstra'),
@@ -1320,7 +1320,7 @@ INSERT INTO `linkedin_universities` (`id`, `country_id`, `name`) VALUES
 (1021, 152, 'Universidad Marítima de Chile'),
 (1022, 152, 'Universidad Mayor'),
 (1023, 152, 'Universidad Metropolitana de Ciencias de la Educación');
-INSERT INTO `linkedin_universities` (`id`, `country_id`, `name`) VALUES
+INSERT INTO `linkedin_universities` (`id`, `country_id`, `university_name`) VALUES
 (1024, 152, 'Universidad Miguel de Cervantes'),
 (1025, 152, 'Universidad Nacional  Andrés Bello'),
 (1026, 152, 'Universidad Panamericána de Ciencias y Artes'),
@@ -2357,7 +2357,7 @@ INSERT INTO `linkedin_universities` (`id`, `country_id`, `name`) VALUES
 (2057, 250, 'Ecole d''Architecture de Bretagne'),
 (2058, 250, 'Ecole d''Architecture de Clermont-Ferrand'),
 (2059, 250, 'Ecole d''Architecture de Grenoble');
-INSERT INTO `linkedin_universities` (`id`, `country_id`, `name`) VALUES
+INSERT INTO `linkedin_universities` (`id`, `country_id`, `university_name`) VALUES
 (2060, 250, 'Ecole d''Architecture de Lyon'),
 (2061, 250, 'Ecole d''Architecture de Marseille-Luminy'),
 (2062, 250, 'Ecole d''Architecture de Nancy'),
@@ -3254,7 +3254,7 @@ INSERT INTO `linkedin_universities` (`id`, `country_id`, `name`) VALUES
 (2953, 276, 'Munich Business School'),
 (2954, 276, 'Musikhochschule Lübeck'),
 (2955, 276, 'Münchner Schmink- und Kosmetikschule - staatl. gen. Berufsfachschule München');
-INSERT INTO `linkedin_universities` (`id`, `country_id`, `name`) VALUES
+INSERT INTO `linkedin_universities` (`id`, `country_id`, `university_name`) VALUES
 (2956, 276, 'NIMBAS, Bradford - Graduate School of Management'),
 (2957, 276, 'OSZ Bürowirtschaft I Berlin Steglitz-Zehlendorf'),
 (2958, 276, 'OSZ Bürowirtschaft I Berlin-Steglitz'),
@@ -4249,7 +4249,7 @@ INSERT INTO `linkedin_universities` (`id`, `country_id`, `name`) VALUES
 (3947, 360, 'Universitas Jenderal Achmad Yani'),
 (3948, 360, 'Universitas Jenderal Soedirman'),
 (3949, 360, 'Universitas Jenggala');
-INSERT INTO `linkedin_universities` (`id`, `country_id`, `name`) VALUES
+INSERT INTO `linkedin_universities` (`id`, `country_id`, `university_name`) VALUES
 (3950, 360, 'Universitas Kader Bangsa Palembang'),
 (3951, 360, 'Universitas Kadiri'),
 (3952, 360, 'Universitas Kanjuruhan'),
@@ -5380,7 +5380,7 @@ INSERT INTO `linkedin_universities` (`id`, `country_id`, `name`) VALUES
 (5077, 392, 'Shukutoku University'),
 (5078, 392, 'Shumei University'),
 (5079, 392, 'Siebold University of Nagasaki');
-INSERT INTO `linkedin_universities` (`id`, `country_id`, `name`) VALUES
+INSERT INTO `linkedin_universities` (`id`, `country_id`, `university_name`) VALUES
 (5080, 392, 'Soai University'),
 (5081, 392, 'Sojo University'),
 (5082, 392, 'Soka University'),
@@ -6452,7 +6452,7 @@ INSERT INTO `linkedin_universities` (`id`, `country_id`, `name`) VALUES
 (6148, 484, 'Universidad del Mayab'),
 (6149, 484, 'Universidad del México Contemporáneo'),
 (6150, 484, 'Universidad del Noreste');
-INSERT INTO `linkedin_universities` (`id`, `country_id`, `name`) VALUES
+INSERT INTO `linkedin_universities` (`id`, `country_id`, `university_name`) VALUES
 (6151, 484, 'Universidad del Noreste de México, A.C.'),
 (6152, 484, 'Universidad del Noroeste, A.C.'),
 (6153, 484, 'Universidad del Norte de México'),
@@ -7440,7 +7440,7 @@ INSERT INTO `linkedin_universities` (`id`, `country_id`, `name`) VALUES
 (7135, 643, 'Baškirskij Gosudarstvennyj Agrarnyj Universitet'),
 (7136, 643, 'Baškirskij Gosudarstvennyj Medicinskij Universitet'),
 (7137, 643, 'Baškirskij Gosudarstvennyj Pedagogiceskij Universitet');
-INSERT INTO `linkedin_universities` (`id`, `country_id`, `name`) VALUES
+INSERT INTO `linkedin_universities` (`id`, `country_id`, `university_name`) VALUES
 (7138, 643, 'Baškirskij Gosudarstvennyj Universitet'),
 (7139, 643, 'Belgorodskaja Gosudarstvennaja Sel''skohozjajstvennaja Akademija'),
 (7140, 643, 'Belgorodskij Gosudarstvennij Tehnologiceskij Universitet im. V.G. Shuhova'),
@@ -8191,7 +8191,7 @@ INSERT INTO `linkedin_universities` (`id`, `country_id`, `name`) VALUES
 (7885, 643, 'Uralskij Gosudarstvennyj Ekonomiceskij Universitet'),
 (7886, 643, 'Uralskij Gosudarstvennyj Pedagogiceskij Universitet'),
 (7887, 643, 'Uralskij Gosudarstvennyj Tehniceskij Universitet');
-INSERT INTO `linkedin_universities` (`id`, `country_id`, `name`) VALUES
+INSERT INTO `linkedin_universities` (`id`, `country_id`, `university_name`) VALUES
 (7888, 643, 'Uralskij Gosudarstvennyj Universitet Putej Soobšcenija'),
 (7889, 643, 'Uralskij Gosudarstvennyj Universitet im. A.M. Gorkogo'),
 (7890, 643, 'Uralskij Gosudarstvenyj Lesotehniceskij Universitet'),
@@ -9180,7 +9180,7 @@ INSERT INTO `linkedin_universities` (`id`, `country_id`, `name`) VALUES
 (8873, 826, 'Anglia Ruskin University'),
 (8874, 826, 'Ashridge Business School'),
 (8875, 826, 'Aston University');
-INSERT INTO `linkedin_universities` (`id`, `country_id`, `name`) VALUES
+INSERT INTO `linkedin_universities` (`id`, `country_id`, `university_name`) VALUES
 (8876, 826, 'BPP Law School'),
 (8877, 826, 'Bath Spa University'),
 (8878, 826, 'Bell College'),
@@ -9545,17 +9545,17 @@ INSERT INTO `linkedin_universities` (`id`, `country_id`, `name`) VALUES
 CREATE TABLE IF NOT EXISTS `webometric_universities` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `country_id` int(5) NOT NULL,
-  `name` varchar(150) NOT NULL,
+  `university_name` varchar(150) NOT NULL,
   `url` varchar(150) NOT NULL,
   PRIMARY KEY (`id`),
   KEY `country_id` (`country_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=16774 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=16774 ;
 
 --
 -- Dumping data for table `webometric_universities`
 --
 
-INSERT INTO `webometric_universities` (`id`, `country_id`, `name`, `url`) VALUES
+INSERT INTO `webometric_universities` (`id`, `country_id`, `university_name`, `url`) VALUES
 (1, 4, 'American University of Afghanistan', 'http://www.auaf.edu.af/'),
 (2, 4, 'Bakhtar University', 'http://www.bakhtar.edu.af/'),
 (3, 4, 'Herat University', 'http://www.heratuniversity.org/'),
@@ -10237,7 +10237,7 @@ INSERT INTO `webometric_universities` (`id`, `country_id`, `name`, `url`) VALUES
 (679, 68, 'Universidad Privada Franz Tamayo', 'http://www.unifranz.edu.bo/'),
 (680, 68, 'Universidad Real', 'http://www.ureal.edu.bo/'),
 (681, 68, 'Universidad Salesiana de Bolivia', 'http://www.usalesiana.edu.bo/');
-INSERT INTO `webometric_universities` (`id`, `country_id`, `name`, `url`) VALUES
+INSERT INTO `webometric_universities` (`id`, `country_id`, `university_name`, `url`) VALUES
 (682, 68, 'Universidad San Francisco de Asis', 'http://www.usfa.edu.bo/'),
 (683, 68, 'Universidad Santo Tomás', 'http://www.ustbolivia.s5.com/'),
 (684, 68, 'Universidad Técnica de Oruro', 'http://www.uto.edu.bo/'),
@@ -10862,7 +10862,7 @@ INSERT INTO `webometric_universities` (`id`, `country_id`, `name`, `url`) VALUES
 (1303, 76, 'Faculdade de Tecnología Ftecbrasil', 'http://www.ftec.com.br/'),
 (1304, 76, 'Faculdade de Tecnología Herrero', 'http://www.herrero.com.br/'),
 (1305, 76, 'Faculdade de Tecnología Intensiva', 'http://www.fateci.com.br/');
-INSERT INTO `webometric_universities` (`id`, `country_id`, `name`, `url`) VALUES
+INSERT INTO `webometric_universities` (`id`, `country_id`, `university_name`, `url`) VALUES
 (1306, 76, 'Faculdade de Tecnología Interamerica', 'http://www.interamerica.edu.br/'),
 (1307, 76, 'Faculdade de Tecnología João Pessoa', 'http://www.fatecjp.com.br/'),
 (1308, 76, 'Faculdade de Tecnología Michel', 'http://www.faculdademichel.com.br/'),
@@ -11519,7 +11519,7 @@ INSERT INTO `webometric_universities` (`id`, `country_id`, `name`, `url`) VALUES
 (1959, 76, 'Instituto Superior de Educação Ocidemnte', 'http://www.iseo.com.br/'),
 (1960, 76, 'Instituto Superior de Educação Presbiteriano Vale do Tocantins', 'http://www.isep-to.kit.net/'),
 (1961, 76, 'Instituto Superior de Educação Programus', 'http://www.isepro.com.br/');
-INSERT INTO `webometric_universities` (`id`, `country_id`, `name`, `url`) VALUES
+INSERT INTO `webometric_universities` (`id`, `country_id`, `university_name`, `url`) VALUES
 (1962, 76, 'Instituto Superior de Educação Pro-Saber', 'http://www.prosaber.org.br/'),
 (1963, 76, 'Instituto Superior de Educação Verde Norte', 'http://www.favenorte.com.br/'),
 (1964, 76, 'Instituto Superior de Educação Victor Hugo', 'http://www.victorhugo.edu.br/'),
@@ -12203,7 +12203,7 @@ INSERT INTO `webometric_universities` (`id`, `country_id`, `name`, `url`) VALUES
 (2642, 152, 'Universidad Miguel de Cervantes', 'http://www.umcervantes.cl/'),
 (2643, 152, 'Universidad Pedro de Valdivia', 'http://www.upv.cl/'),
 (2644, 152, 'Universidad San Marcos', 'http://www.ursm.cl/');
-INSERT INTO `webometric_universities` (`id`, `country_id`, `name`, `url`) VALUES
+INSERT INTO `webometric_universities` (`id`, `country_id`, `university_name`, `url`) VALUES
 (2645, 152, 'Universidad San Sebastian', 'http://www.uss.cl/'),
 (2646, 152, 'Universidad Santo Tomas Santiago de Chile', 'http://www.ust.cl/'),
 (2647, 152, 'Universidad Técnica Federico Santa María', 'http://www.utfsm.cl/'),
@@ -12908,7 +12908,7 @@ INSERT INTO `webometric_universities` (`id`, `country_id`, `name`, `url`) VALUES
 (3346, 156, 'Qiqihar University', 'http://www.qqhru.edu.cn/'),
 (3347, 156, 'Quanzhou Teacher''s College', 'http://www.qztc.edu.cn/'),
 (3348, 156, 'Qufu Normal University', 'http://www.qfnu.edu.cn/');
-INSERT INTO `webometric_universities` (`id`, `country_id`, `name`, `url`) VALUES
+INSERT INTO `webometric_universities` (`id`, `country_id`, `university_name`, `url`) VALUES
 (3349, 156, 'Quingdao Agricultural University (Laiyang Agricultural College)', 'http://www.qau.edu.cn/'),
 (3350, 156, 'Qujing Normal University', 'http://www.qjnc.edu.cn/'),
 (3351, 156, 'Renmin University Law School', 'http://www.civillaw.com.cn/'),
@@ -13564,7 +13564,7 @@ INSERT INTO `webometric_universities` (`id`, `country_id`, `name`, `url`) VALUES
 (4001, 170, 'Universidad de la Salle Colombia', 'http://unisalle.lasalle.edu.co/'),
 (4002, 170, 'Universidad de los Andes', 'http://www.uniandes.edu.co/'),
 (4003, 170, 'Universidad de los Llanos', 'http://www.unillanos.edu.co/');
-INSERT INTO `webometric_universities` (`id`, `country_id`, `name`, `url`) VALUES
+INSERT INTO `webometric_universities` (`id`, `country_id`, `university_name`, `url`) VALUES
 (4004, 170, 'Universidad de Manizales', 'http://www.umanizales.edu.co/'),
 (4005, 170, 'Universidad de Medellín', 'http://www.udem.edu.co/'),
 (4006, 170, 'Universidad de Nariño', 'http://www.udenar.edu.co/'),
@@ -14228,7 +14228,7 @@ INSERT INTO `webometric_universities` (`id`, `country_id`, `name`, `url`) VALUES
 (4664, 250, 'Bts Audiovisuel Lycee Rene Cassin Bayonne', 'http://www.audiovisuel-cassin.com/'),
 (4665, 250, 'Burgundy School of Business and Management *', 'http://www.bsbu.eu/'),
 (4666, 250, 'Business School of Marseille', 'http://www.groupe-ecolepratique.com/');
-INSERT INTO `webometric_universities` (`id`, `country_id`, `name`, `url`) VALUES
+INSERT INTO `webometric_universities` (`id`, `country_id`, `university_name`, `url`) VALUES
 (4667, 250, 'Cavilam Centre d''Approches Vivantes des Langues et des Medias', 'http://www.cavilam.com/'),
 (4668, 250, 'Cefedem Rhone-Alpes', 'http://www.cefedem-rhonealpes.org/'),
 (4669, 250, 'Center for Industrial Studies', 'http://www.cesi.fr/'),
@@ -14789,7 +14789,7 @@ INSERT INTO `webometric_universities` (`id`, `country_id`, `name`, `url`) VALUES
 (5224, 250, 'Université Michel de Montaigne Bordeaux 3', 'http://www.u-bordeaux3.fr/'),
 (5225, 250, 'Université Montesquieu Bordeaux Iv', 'http://www.u-bordeaux4.fr/'),
 (5226, 250, 'Université Montpellier 3 Paul Valery', 'http://www.univ-montp3.fr/');
-INSERT INTO `webometric_universities` (`id`, `country_id`, `name`, `url`) VALUES
+INSERT INTO `webometric_universities` (`id`, `country_id`, `university_name`, `url`) VALUES
 (5227, 250, 'Université Montpellier Ii Sciences et Techniques du Languedoc', 'http://www.univ-montp2.fr/'),
 (5228, 250, 'Université Nancy 2', 'http://www.univ-nancy2.fr/'),
 (5229, 250, 'Université Ouverte Montpellier Languedoc Roussillon', 'http://www.uomlr.fr/'),
@@ -15433,7 +15433,7 @@ INSERT INTO `webometric_universities` (`id`, `country_id`, `name`, `url`) VALUES
 (5867, 348, 'Szechenyi Istvan University', 'http://uni.sze.hu/'),
 (5868, 348, 'Szent Istvan University', 'http://www.szie.hu/'),
 (5869, 348, 'University of Debrecen', 'http://www.unideb.hu/');
-INSERT INTO `webometric_universities` (`id`, `country_id`, `name`, `url`) VALUES
+INSERT INTO `webometric_universities` (`id`, `country_id`, `university_name`, `url`) VALUES
 (5870, 348, 'University of Debrecen Medical School and Health Science Center', 'http://www.ud-mhsc.org/'),
 (5871, 348, 'University of Debrecen Medical School and Health Science Center *', 'http://www.dote.hu/'),
 (5872, 348, 'University of Kaposvar', 'http://www.u-kaposvar.hu/'),
@@ -16079,7 +16079,7 @@ INSERT INTO `webometric_universities` (`id`, `country_id`, `name`, `url`) VALUES
 (6512, 360, 'Maranatha Christian University', 'http://www.maranatha.edu/'),
 (6513, 360, 'Merdeka University Malang', 'http://www.unmer.ac.id/'),
 (6514, 360, 'Muria Kudus University', 'http://www.umk.ac.id/');
-INSERT INTO `webometric_universities` (`id`, `country_id`, `name`, `url`) VALUES
+INSERT INTO `webometric_universities` (`id`, `country_id`, `university_name`, `url`) VALUES
 (6515, 360, 'National Institute of Technology Malang', 'http://www.itn.ac.id/'),
 (6516, 360, 'Panca Bhakti University', 'http://www.upb.ac.id/'),
 (6517, 360, 'Pasundan University', 'http://www.unpas.ac.id/'),
@@ -16757,7 +16757,7 @@ INSERT INTO `webometric_universities` (`id`, `country_id`, `name`, `url`) VALUES
 (7189, 380, 'Accademia di Belle Arti Galli', 'http://www.accademiagalli.com/'),
 (7190, 380, 'Accademia di Belle Arti l''Aquila', 'http://www.accademiabellearti.laquila.it/'),
 (7191, 380, 'Accademia di Belle Arti Reggio Calabria', 'http://www.accademiabelleartirc.it/');
-INSERT INTO `webometric_universities` (`id`, `country_id`, `name`, `url`) VALUES
+INSERT INTO `webometric_universities` (`id`, `country_id`, `university_name`, `url`) VALUES
 (7192, 380, 'Accademia di Belle Arti Santa Giulia Brescia', 'http://www.accademiasantagiulia.it/'),
 (7193, 380, 'Accademia di Belle Arti Sassari', 'http://www.accademiadibelleartisassari.it/'),
 (7194, 380, 'Accademia di Belle Lorenzo da Viterbo *', 'http://www.abav.it/'),
@@ -17425,7 +17425,7 @@ INSERT INTO `webometric_universities` (`id`, `country_id`, `name`, `url`) VALUES
 (7856, 392, 'Osaka Women''s University', 'http://www.osaka-wu.ac.jp/'),
 (7857, 392, 'Oshima National College of Maritime Technology', 'http://www.oshima-k.ac.jp/'),
 (7858, 392, 'Otani University', 'http://www.otani.ac.jp/');
-INSERT INTO `webometric_universities` (`id`, `country_id`, `name`, `url`) VALUES
+INSERT INTO `webometric_universities` (`id`, `country_id`, `university_name`, `url`) VALUES
 (7859, 392, 'Otaru University of Commerce', 'http://www.otaru-uc.ac.jp/'),
 (7860, 392, 'Otemae College', 'http://www.otemae.ac.jp/'),
 (7861, 392, 'Otemon Gakuin University', 'http://www.otemon.ac.jp/'),
@@ -18153,7 +18153,7 @@ INSERT INTO `webometric_universities` (`id`, `country_id`, `name`, `url`) VALUES
 (8583, 410, 'Suwon Science College', 'http://www.ssc.ac.kr/'),
 (8584, 410, 'Suwon University', 'http://www.suwon.ac.kr/'),
 (8585, 410, 'Suwon Womens College', 'http://www.swc.ac.kr/');
-INSERT INTO `webometric_universities` (`id`, `country_id`, `name`, `url`) VALUES
+INSERT INTO `webometric_universities` (`id`, `country_id`, `university_name`, `url`) VALUES
 (8586, 410, 'Taegu Arts University', 'http://www.tau.ac.kr/'),
 (8587, 410, 'Taegu Science College', 'http://www.taegu-c.ac.kr/'),
 (8588, 410, 'Taegu Technical College', 'http://www.ttc.ac.kr/'),
@@ -18819,7 +18819,7 @@ INSERT INTO `webometric_universities` (`id`, `country_id`, `name`, `url`) VALUES
 (9248, 484, 'Universidad Internacional', 'http://www.uninter.edu.mx/'),
 (9249, 484, 'Universidad Internacional de La Paz', 'http://www.unipaz.edu.mx/'),
 (9250, 484, 'Universidad Internacional de Profesiones/Escuela Internacional de Turismo *', 'http://www.unipro.edu.mx/');
-INSERT INTO `webometric_universities` (`id`, `country_id`, `name`, `url`) VALUES
+INSERT INTO `webometric_universities` (`id`, `country_id`, `university_name`, `url`) VALUES
 (9251, 484, 'Universidad Isidro Fabela de Toluca', 'http://www.uift.com.mx/'),
 (9252, 484, 'Universidad José Vasconcelos de Oaxaca', 'http://www.univas.edu.mx/'),
 (9253, 484, 'Universidad Juárez Autónoma de Tabasco', 'http://www.ujat.mx/'),
@@ -19455,7 +19455,7 @@ INSERT INTO `webometric_universities` (`id`, `country_id`, `name`, `url`) VALUES
 (9883, 578, 'Norwegian University of Life Sciences', 'http://www.umb.no/'),
 (9884, 578, 'Technology', 'http://www.ntnu.no/'),
 (9885, 578, 'Oslo National Academy of the Arts', 'http://www.khio.no/');
-INSERT INTO `webometric_universities` (`id`, `country_id`, `name`, `url`) VALUES
+INSERT INTO `webometric_universities` (`id`, `country_id`, `university_name`, `url`) VALUES
 (9886, 578, 'Oslo School of Architecture', 'http://www.aho.no/'),
 (9887, 578, 'Oslo University College', 'http://www.hio.no/'),
 (9888, 578, 'Ostfold University College', 'http://www.hiof.no/'),
@@ -20113,7 +20113,7 @@ INSERT INTO `webometric_universities` (`id`, `country_id`, `name`, `url`) VALUES
 (10540, 616, 'Academy of Humanities and Economics in Lodz', 'http://www.wshe.lodz.pl/'),
 (10541, 616, 'Academy of Humanities and Economics in Pabianice', 'http://www.wshe.pabianice.pl/'),
 (10542, 616, 'Academy of International Economic and Political Relations in Gdynia', 'http://www.wsms.edu.pl/');
-INSERT INTO `webometric_universities` (`id`, `country_id`, `name`, `url`) VALUES
+INSERT INTO `webometric_universities` (`id`, `country_id`, `university_name`, `url`) VALUES
 (10543, 616, 'Academy of Management and Administration in Opole', 'http://www.wszia.opole.pl/'),
 (10544, 616, 'Academy of Management in Lodz', 'http://www.swspiz.pl/'),
 (10545, 616, 'Academy of Music Gdansk Stanislaw Moniuszko', 'http://www.amuz.gda.pl/'),
@@ -20699,7 +20699,7 @@ INSERT INTO `webometric_universities` (`id`, `country_id`, `name`, `url`) VALUES
 (11125, 642, 'Caragiale Academy of Theatrical Arts and Cinematography', 'http://www.unatc.ro/'),
 (11126, 642, 'Carol Davila University of Medicine and Pharmacy', 'http://www.univermed-cdgm.ro/'),
 (11127, 642, 'Central University Library of Bucharest', 'http://www.bcub.ro/');
-INSERT INTO `webometric_universities` (`id`, `country_id`, `name`, `url`) VALUES
+INSERT INTO `webometric_universities` (`id`, `country_id`, `university_name`, `url`) VALUES
 (11128, 642, 'Constantin Brancoveanu University Pitesti', 'http://www.univcb.ro/'),
 (11129, 642, 'Danubius University of Galati', 'http://www.univ-danubius.ro/'),
 (11130, 642, 'Dunarea de Jos University Galati', 'http://www.ugal.ro/'),
@@ -21293,7 +21293,7 @@ INSERT INTO `webometric_universities` (`id`, `country_id`, `name`, `url`) VALUES
 (11718, 643, 'Saint Petersburg State University of Water Communications', 'http://www.spbuwc.ru/'),
 (11719, 643, 'Saint Petersburg State University of Water Communications Vyborg Branch', 'http://www.vbguwc.ru/'),
 (11720, 643, 'Saint Petersburg University of Humanities and Social Sciences', 'http://www.gup.ru/');
-INSERT INTO `webometric_universities` (`id`, `country_id`, `name`, `url`) VALUES
+INSERT INTO `webometric_universities` (`id`, `country_id`, `university_name`, `url`) VALUES
 (11721, 643, 'Saint Petersburg University of the Ministry of Internal Affairs of the Russian Federation', 'http://www.univermvd.ru/'),
 (11722, 643, 'Saint Petersburg University of the State Fire Service of the Ministry of the Russian Federation for Civil Defense, Emergencies and Elimination of Cons', 'http://www.igps.ru/'),
 (11723, 643, 'Saint Tikhons Orthodox University', 'http://www.pstgu.ru/'),
@@ -21934,7 +21934,7 @@ INSERT INTO `webometric_universities` (`id`, `country_id`, `name`, `url`) VALUES
 (12358, 752, 'AlbaNova University Center', 'http://www.albanova.se/'),
 (12359, 752, 'Blekinge Institute of Technology', 'http://www.bth.se/'),
 (12360, 752, 'Chalmers University of Technology', 'http://www.chalmers.se/');
-INSERT INTO `webometric_universities` (`id`, `country_id`, `name`, `url`) VALUES
+INSERT INTO `webometric_universities` (`id`, `country_id`, `university_name`, `url`) VALUES
 (12361, 752, 'Dalarna University College', 'http://www.du.se/'),
 (12362, 752, 'Erica Foundation', 'http://www.ericastiftelsen.se/'),
 (12363, 752, 'Ersta Hospital', 'http://www.erstadiakoni.se/'),
@@ -22621,7 +22621,7 @@ INSERT INTO `webometric_universities` (`id`, `country_id`, `name`, `url`) VALUES
 (13044, 804, 'Dnipropetrovsk State Medical Academy', 'http://www.dsma.dp.ua/'),
 (13045, 804, 'Dnipropetrovsk State Technical University of Railway Transport', 'http://www.diit.edu.ua/'),
 (13046, 804, 'Dnipropetrovsk State University', 'http://www.dsu.dp.ua/');
-INSERT INTO `webometric_universities` (`id`, `country_id`, `name`, `url`) VALUES
+INSERT INTO `webometric_universities` (`id`, `country_id`, `university_name`, `url`) VALUES
 (13047, 804, 'Donbas National Academy of Civil Engineering and Architecture', 'http://www.dgasa.dn.ua/'),
 (13048, 804, 'Donbas State Academy Engineering', 'http://www.dgma.donetsk.ua/'),
 (13049, 804, 'Donetsk National University', 'http://www.donnu.edu.ua/'),
@@ -23325,7 +23325,7 @@ INSERT INTO `webometric_universities` (`id`, `country_id`, `name`, `url`) VALUES
 (13747, 840, 'Clinton School of Public Service', 'http://www.clintonschool.uasys.edu/'),
 (13748, 840, 'Cloud County Community College', 'http://www.cloud.edu/'),
 (13749, 840, 'Clover Park Technical College', 'http://www.cptc.edu/');
-INSERT INTO `webometric_universities` (`id`, `country_id`, `name`, `url`) VALUES
+INSERT INTO `webometric_universities` (`id`, `country_id`, `university_name`, `url`) VALUES
 (13750, 840, 'Clovis Community College', 'http://www.clovis.edu/'),
 (13751, 840, 'Coahoma Community College', 'http://www.ccc.cc.ms.us/'),
 (13752, 840, 'Coastal Bend College', 'http://vct.coastalbend.edu/'),
@@ -24052,7 +24052,7 @@ INSERT INTO `webometric_universities` (`id`, `country_id`, `name`, `url`) VALUES
 (14473, 840, 'Itawamba Community College', 'http://www.icc.cc.ms.us/'),
 (14474, 840, 'Ithaca College', 'http://www.ithaca.edu/'),
 (14475, 840, 'ITI Technical College', 'http://www.iticollege.edu/');
-INSERT INTO `webometric_universities` (`id`, `country_id`, `name`, `url`) VALUES
+INSERT INTO `webometric_universities` (`id`, `country_id`, `university_name`, `url`) VALUES
 (14476, 840, 'ITT Technical Institute', 'http://www.itt-tech.edu/'),
 (14477, 840, 'Ivy Tech State College', 'http://www.ivytech.edu/'),
 (14478, 840, 'J F Drake State Technical College', 'http://www.dstc.cc.al.us/'),
@@ -24771,7 +24771,7 @@ INSERT INTO `webometric_universities` (`id`, `country_id`, `name`, `url`) VALUES
 (15191, 840, 'Northwestern Health Sciences University', 'http://www.nwhealth.edu/'),
 (15192, 840, 'Northwestern Michigan College', 'http://www.nmc.edu/'),
 (15193, 840, 'Northwestern Oklahoma State University', 'http://www.nwosu.edu/');
-INSERT INTO `webometric_universities` (`id`, `country_id`, `name`, `url`) VALUES
+INSERT INTO `webometric_universities` (`id`, `country_id`, `university_name`, `url`) VALUES
 (15194, 840, 'Northwestern Polytechnic University', 'http://www.npu.edu/'),
 (15195, 840, 'Northwestern State University of Louisiana', 'http://www.nsula.edu/'),
 (15196, 840, 'Northwestern Technical College', 'http://www.northwesterntech.edu/'),
@@ -25477,7 +25477,7 @@ INSERT INTO `webometric_universities` (`id`, `country_id`, `name`, `url`) VALUES
 (15896, 840, 'Temple University', 'http://www.temple.edu/'),
 (15897, 840, 'Tennessee State University', 'http://www.tnstate.edu/'),
 (15898, 840, 'Tennessee Technological University', 'http://www.tntech.edu/');
-INSERT INTO `webometric_universities` (`id`, `country_id`, `name`, `url`) VALUES
+INSERT INTO `webometric_universities` (`id`, `country_id`, `university_name`, `url`) VALUES
 (15899, 840, 'Tennessee Temple University', 'http://www.tntemple.edu/'),
 (15900, 840, 'Tennessee Wesleyan College', 'http://www.twcnet.edu/'),
 (15901, 840, 'Terra State Community College', 'http://www.terra.edu/'),
@@ -26172,7 +26172,7 @@ INSERT INTO `webometric_universities` (`id`, `country_id`, `name`, `url`) VALUES
 (16590, 862, 'Universidad Dr Rafael Belloso Chacín', 'http://www.urbe.edu/'),
 (16591, 862, 'Universidad Fermín Toro', 'http://www.uft.edu.ve/'),
 (16592, 862, 'Universidad Gran Mariscal de Ayacucho', 'http://www.ugma.edu.ve/');
-INSERT INTO `webometric_universities` (`id`, `country_id`, `name`, `url`) VALUES
+INSERT INTO `webometric_universities` (`id`, `country_id`, `university_name`, `url`) VALUES
 (16593, 862, 'Universidad Iberoamericana del Deporte', 'http://www.uideporte.edu.ve/'),
 (16594, 862, 'Universidad José Antonio Páez', 'http://www.ujap.edu.ve/'),
 (16595, 862, 'Universidad José María Vargas', 'http://www.ujmv.edu/'),

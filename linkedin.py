@@ -14,8 +14,8 @@ TBL_SCHOOL = 'universities'
 
 def buildSchools():
     conn = MySQLdb.connect(
-        host = DB_HOST, 
-        user = DB_USER, 
+        host = DB_HOST,
+        user = DB_USER,
         passwd = DB_PASSWD,
         db = DB_NAME,
         charset = 'utf8'
@@ -23,12 +23,13 @@ def buildSchools():
     print "Creating table %s\n" % TBL_SCHOOL
     cursor = conn.cursor()
     cursor.execute("DROP TABLE IF EXISTS %s" % (TBL_SCHOOL))
-    cursor.execute("CREATE TABLE %s(`id` INT(11) NOT NULL AUTO_INCREMENT,`country_id` INT(5) NOT NULL,`name` VARCHAR(150) NOT NULL, PRIMARY KEY (`id`), KEY `country_id` (`country_id`)) ENGINE=MyISAM DEFAULT CHARSET=utf8" % (TBL_SCHOOL))
-    
+    cursor.execute("CREATE TABLE %s(`id` INT(11) NOT NULL
+            AUTO_INCREMENT,`country_id` INT(5) NOT NULL,`university_name` VARCHAR(150) NOT NULL, PRIMARY KEY (`id`), KEY `country_id` (`country_id`)) ENGINE=MyISAM DEFAULT CHARSET=utf8" % (TBL_SCHOOL))
+
     print "Get countries from table %s\n\n" % TBL_COUNTRY
     cursor.execute("SELECT %s, %s FROM %s WHERE 1" % (COUNTRY_ID, COUNTRY_CODE, TBL_COUNTRY))
     countries = cursor.fetchall()
-    
+
     print "Trying to build schools..\n"
     for country in countries:
         print "Populate schools in %s\n" % country[1]
